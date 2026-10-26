@@ -1,0 +1,27 @@
+{
+  "figures": [
+    {
+      "file": "zwz2-performance.svg",
+      "sha256": "b1aa477dd65385fc096ba35892d0fc0cbcc024cc4571cda666921f610782ac0d",
+      "source": "Complete 25-benchmark table in the ZwZ2 model-card table style; all model scales and reference columns."
+    },
+    {
+      "file": "zwz-v2-overview.svg",
+      "sha256": "cdcf7f3215f31bacd6990d8b5b642bbac5f585d4970d375c8badf8d3ed9ee5a1",
+      "source": "Vector export of the supplied overview PDF.",
+      "pdf": "zwz-v2-overview.pdf",
+      "pdf_sha256": "e07c4845518fdf96e8e2b03588e4b9e1ecddc5296b2dba6f7e95a9fc58d6bc59",
+      "edit_scope": "Three model legend labels renamed to ZwZ2-4B/9B/27B; all benchmark values retained."
+    },
+    {
+      "file": "evidenceconnect-pipeline.png",
+      "sha256": "081c19b14c86a7a2fe1ebeea88e6ee52325b8e2f9935f8b50e0b33f1567a126c",
+      "source": "Paper Figure 2, unchanged method diagram."
+    }
+  ],
+  "results": {
+    "file": "benchmark-results.json",
+    "sha256": "db5e633519694567d658d1c59d1277ae7a8fdc8dcc2cc81778db86623f9cb158",
+    "source": "User-provided updated 25-benchmark main table."
+  }
+}

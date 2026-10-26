@@ -1,0 +1,28 @@
+# Tool config. API keys and endpoints are read from environment variables.
+
+code_interpreter:
+  work_dir: "/tmp/code_interpreter"
+  output_timeout: 30
+
+zoom:
+  work_dir: "/tmp/zoom"
+  output_timeout: 30
+
+web_search:
+  max_results: 10
+  timeout: 10
+
+visit:
+  max_content_length: 150000
+  use_llm_summary: true
+  timeout: 120
+  api_key: ""
+  api_endpoint: ""
+  model_name: ""
+
+image_search:
+  api_key: ""
+  max_results: 5
+  search_type: "text"
+  search_image_max_pixels: 1000000
+  search_image_quality: 75

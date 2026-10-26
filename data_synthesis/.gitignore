@@ -1,0 +1,13 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# Local credentials and generated datasets/artifacts.
+# Keep the .example templates, ignore the populated local_env.sh and data/.
+configs/local_env.sh
+data/
+experiments/
+outputs/

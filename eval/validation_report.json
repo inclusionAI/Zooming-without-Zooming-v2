@@ -1,0 +1,42 @@
+{
+  "python": "3.12.14",
+  "real_gpu_tested": false,
+  "full_real_datasets_tested": false,
+  "dependencies": {
+    "openai": "2.54.0",
+    "Pillow": "13.0.0",
+    "PyYAML": "6.0.3",
+    "tqdm": "4.70.1",
+    "requests": "2.34.2"
+  },
+  "python_sources_parsed": 94,
+  "tests_run": 342,
+  "failures": 0,
+  "errors": 0,
+  "skipped": [
+    "test_managed.ManagedTests.test_dead_service_cancels_real_evaluation_child",
+    "test_managed.ManagedTests.test_real_child_exit_and_failure",
+    "test_serving_lifecycle.ServiceLifecycleIntegration.test_real_exited_parent_orphan_cleanup_then_retry_and_http_ready",
+    "test_serving_lifecycle.ServiceLifecycleIntegration.test_real_listener_is_not_reused_or_terminated",
+    "test_serving_processes.ServiceProcesses.test_existing_api_owner_not_reused_or_terminated",
+    "test_serving_processes.ServiceProcesses.test_failed_attempt_orphan_cleaned_healthy_replica_not_restarted",
+    "test_serving_processes.ServiceProcesses.test_two_replicas_start_in_parallel_and_return_exact_model",
+    "test_serving_processes.ServiceProcesses.test_wrong_model_fails_without_retry_and_cleans_children"
+  ],
+  "unit_tests_successful": true,
+  "successful": true,
+  "release_check": {
+    "release_ready": false,
+    "source_integrity_errors": [],
+    "release_blockers": [
+      "AgentVista upstream redistribution rights require confirmation",
+      "Historical MIMIC mathruler policy and all-benchmark numerical integration acceptance pending",
+      "Upstream license/attribution review for audited reference excerpts remains pending",
+      "Project GUI/shared inference upstream attribution review required",
+      "Full real-data/model integration acceptance has not been recorded"
+    ],
+    "warnings": [],
+    "owner_adaptations_authorized": true,
+    "note": "A passing unit test does not prove GPU compatibility or numerical parity."
+  }
+}

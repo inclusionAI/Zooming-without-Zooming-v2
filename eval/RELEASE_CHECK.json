@@ -1,0 +1,14 @@
+{
+  "release_ready": false,
+  "source_integrity_errors": [],
+  "release_blockers": [
+    "AgentVista upstream redistribution rights require confirmation",
+    "Historical MIMIC mathruler policy and all-benchmark numerical integration acceptance pending",
+    "Upstream license/attribution review for audited reference excerpts remains pending",
+    "Project GUI/shared inference upstream attribution review required",
+    "Full real-data/model integration acceptance has not been recorded"
+  ],
+  "warnings": [],
+  "owner_adaptations_authorized": true,
+  "note": "A passing unit test does not prove GPU compatibility or numerical parity."
+}

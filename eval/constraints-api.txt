@@ -1,0 +1,5 @@
+# Tested API-layer constraints, not a full GPU/runtime lockfile.
+openai==1.109.1
+PyYAML==6.0.3
+tqdm==4.67.1
+requests==2.32.5

@@ -1,0 +1,45 @@
+# Benchmark download and preparation catalogue
+
+Download authorized releases separately before preparation. Source observations
+below are recorded metadata, not a promise of current anonymous availability.
+Code repositories are not substitutes for full annotations and image assets.
+
+| Benchmark | Data source | Preparation requirements |
+| --- | --- | --- |
+| `chartography` | [surgeai/chartography](https://huggingface.co/datasets/surgeai/chartography) | Official README names this HF repository, but anonymous access returned 401. Obtain access or an authorized local release. The two GitHub dummy samples are NOT the 100-question benchmark. Import original data.parquet plus charts with prepare --bench chartography. No public accessibility or dataset redistribution is claimed. |
+| `mimic` | [anurag4446/mimic](https://huggingface.co/datasets/anurag4446/mimic) | Use common/oddone/listing 1000 each and balanced Counting 5000, not the unbalanced extension or raw-ID-deduplicated 2500. The current prepare entry expects the project's normalized mimic_*.json and ordered images; downloading HF Parquet does not by itself recreate that normalization. |
+| `mmsi` | [RunsenXu/MMSI-Bench](https://huggingface.co/datasets/RunsenXu/MMSI-Bench) | Use MMSI_Bench.parquet and the existing prepare --bench mmsi path; preserve 1000 examples and original ordered image bytes. |
+| `spar` | [jasonzhango/SPAR-Bench](https://huggingface.co/datasets/jasonzhango/SPAR-Bench) | Download the four data/test-*.parquet shards, not SPAR-7M training data, Tiny or RGBD. Existing prepare imports all four shards and requires the project profile's 7211 rows/20 tasks. Upstream README says 7207; do not silently reduce the denominator to match that prose. |
+| `mmlongbench` | [ZhaoweiWang/MMLongBench](https://huggingface.co/datasets/ZhaoweiWang/MMLongBench) | Extract 0_mmlb_data.tar.gz, 1_vrag_image.tar.gz, 2_mm-niah_image.tar.gz and 2_vh_image.tar.gz. Evaluate the selected five visual families at K8/16/32/64/128 only. Downloading the whole repository may also fetch unused ICL/Counting/document assets. |
+| `milebench` | [FreedomIntelligence/MileBench](https://huggingface.co/datasets/FreedomIntelligence/MileBench) | Download all MileBench_part*.tar.gz components and follow the release's archive instructions. Existing prepare converts the original task JSON/images into the project test29 profile; do not mix adv scores. |
+| `memlens` | [xiyuRenBill/MEMLENS](https://huggingface.co/datasets/xiyuRenBill/MEMLENS) | Use all four context annotations and referenced images, retain session/system/date and message order, then prepare --bench memlens with the original release image root. Each context must contain 789 questions. |
+| `erqa` | [RunsenXu/ERQA](https://github.com/embodiedreasoning/ERQA/tree/main/data) | HF provides converted Parquet/TSV with visual_indices already applied and image order changed. The project's existing prepare expects ORIGINAL data/erqa.tfrecord from the official GitHub release. Do not pass converted Parquet to that importer or apply visual_indices twice. |
+| `viewspatial` | [lidingm/ViewSpatial-Bench](https://huggingface.co/datasets/lidingm/ViewSpatial-Bench) | Use ViewSpatial-Bench.json plus scannetv2_val.zip and val2017.zip; preserve paths and 5712 records. Run existing prepare --bench viewspatial before inference. |
+| `mindcube` | [MLL-Lab/MindCube](https://huggingface.co/datasets/MLL-Lab/MindCube) | Extract data.zip and follow the official raw_qa generation instructions. Import MindCube_tinybench_raw_qa.jsonl, not the full benchmark or cognitive-map prompts. Project Tiny distribution is 250 around/200 rotation/600 among. A raw Tiny JSONL is not automatically the raw_qa input_prompt schema. |
+| `agentvista` | [Warrieryes/AgentVista](https://huggingface.co/datasets/Warrieryes/AgentVista) | Run existing prepare --bench agentvista on the downloaded Parquet directory; requires the selected 209 questions, exports original image bytes and preserves the project's free-tool/final-answer scoring profile. |
+| `screenspot_pro` | [likaixin/ScreenSpot-Pro](https://huggingface.co/datasets/likaixin/ScreenSpot-Pro) | Obtain annotations and full original screenshot assets, not resized thumbnails or another split. Project profile requires 1581 en/positive/instruction tasks. Check current archive contents before extraction. |
+| `ui_vision` | [ServiceNow/ui-vision](https://huggingface.co/datasets/ServiceNow/ui-vision) | Use original images and annotations/element_grounding basic/functional/spatial; preserve the 1772/1772/1935 project denominators. Layout/action tasks are not part of this reported profile. |
+| `mmstar` | [Lin-Chen/MMStar](https://huggingface.co/datasets/Lin-Chen/MMStar) | HF mmstar.parquet/TSV is original data. The platform preparation entry expects the authorized 1500-row project-normalized query/system/response/images release, preserving exact option and prompt formatting; upstream download alone is not that conversion. |
+| `babyvision` | [UnipatAI/BabyVision](https://huggingface.co/datasets/UnipatAI/BabyVision) | Use the 388-question BabyVision benchmark, not BabyVision-Gen (280). Project platform preparation expects the normalized original query/system/gold/custom-judge format, not the separate upstream boxed-answer scorer. |
+| `vstar` | [craigwu/vstar_bench](https://huggingface.co/datasets/craigwu/vstar_bench) | 191 high-resolution image questions: direct_attributes (115) and relative_position (76), not OCR/GPT4V-hard or the unrelated video V-STaR dataset. convert reads the paired original JSON/JPG folders, verifies all 191 raw metadata fingerprints, and restores project shortened options and fixed option order with content-free field slices. The official original options[0] determines the gold after reordering. Legacy prepare still imports project-normalized JSONL. |
+| `hr4k` | [DreamMr/HR-Bench](https://huggingface.co/datasets/DreamMr/HR-Bench) | Use hr_bench_4k.parquet or matching TSV, 800 rows. It shares the download repository with HR-8K but not its split. Project prepare expects the retained hrbench-4k-shuf-imgplaceholder.jsonl normalization. |
+| `hr8k` | [DreamMr/HR-Bench](https://huggingface.co/datasets/DreamMr/HR-Bench) | Use hr_bench_8k.parquet or matching TSV, 800 rows; do not replace with HR-4K images. Project prepare expects hrbench-8k-shuf-imgplaceholder.jsonl. |
+| `mme_en` | [yifanzhang114/MME-RealWorld](https://huggingface.co/datasets/yifanzhang114/MME-RealWorld) | Use MME_RealWorld.json and original image archives, 23609 normalized QA rows; not classic MME or MME-RealWorld-Lite. Some image archives are split parts. Project platform importer expects mme-realworld-shuf-NasPic-imgplaceholder.jsonl. |
+| `mme_cn` | [yifanzhang114/MME-RealWorld](https://huggingface.co/datasets/yifanzhang114/MME-RealWorld) | Use MME_RealWorld_CN.json and the matching Chinese image assets, 5917 normalized QA rows; not English/Lite/classic MME. Project platform importer expects mme-realworld-cn-shuf-NasPic-imgplaceholder.jsonl. |
+| `zoombench` | [inclusionAI/ZoomBench](https://huggingface.co/datasets/inclusionAI/ZoomBench) | Use all 845 full-image questions from data/test.parquet, not crop_image or a crop/search method. Preserve original query/response; project platform importer expects pbench-shuf-NasPic-imgplaceholder.jsonl. |
+| `perception` | [moonshotai/PerceptionBench](https://huggingface.co/datasets/moonshotai/PerceptionBench) | Use PerceptionBench.jsonl, 3000 questions with image data URIs and original problem/hint fields; not the unrelated medical or vision-judge datasets sharing this name. Project importer expects perceptionbench.jsonl normalized prompt/images. |
+| `treebench` | [HaochenWang/TreeBench](https://huggingface.co/datasets/HaochenWang/TreeBench) | Use TreeBench.tsv, 405 rows; not TreeVGR training sets. Project reports platform answer accuracy, not the extra grounding-IoU metric; importer expects treebench-shuf-imgplaceholder.jsonl. |
+| `o3` | [m-Just/O3-Bench](https://huggingface.co/datasets/m-Just/O3-Bench) | Use test/metadata.jsonl plus test/images, 345 chart/map questions. Preserve question/options/answer and layout fields. InSight-o3/O3-Bench returned 401; use this accessible author repository. Project importer expects insight-o3.jsonl normalization. |
+| `countqa` | [Jayant-Sravan/CountQA](https://huggingface.co/datasets/Jayant-Sravan/CountQA) | Source is image-level with parallel questions/answers lists. Expand aligned QA pairs for the project's 1528 question denominator; not the number of image rows or a lite sample. Importer expects countqa-shuf-imgplaceholder.jsonl, retaining original platform query/system. |
+
+## Commands
+
+Install `.[data]` and inspect a download plan first:
+
+```bash
+python -m zwz_eval download --bench vstar --target data/downloads/vstar
+```
+
+Only request actual downloads after checking access rights, revision and disk space.
+Follow each provider's extraction instructions; use the data registry and
+[Quickstart](../README.md) for a separate preparation step. No datasets are bundled.

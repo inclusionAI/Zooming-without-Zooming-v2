@@ -1,0 +1,31 @@
+name: offline-contracts
+on: [push, pull_request]
+jobs:
+  contracts:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.10', '3.12']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - run: python -m pip install --upgrade pip
+      - run: python -m pip install -e '.[api]'
+      - run: python -m unittest discover -s tests -v
+      - run: zwz-eval check-source
+      - run: zwz-eval plan --config examples/all.json --bench memlens
+      # Editable installs can hide missing wheel resources. Build, replace the
+      # editable install, then test outside the checkout in isolated mode.
+      - run: python -m pip install 'setuptools>=68' wheel
+      - run: python -m pip wheel . --no-deps --no-build-isolation --wheel-dir /tmp/zwz-wheel
+      - run: python -m pip install --force-reinstall --no-deps /tmp/zwz-wheel/*.whl
+      - name: Check installed wheel, not checkout
+        working-directory: /tmp
+        run: |
+          python -I -c "from zwz_eval.release import check; r=check(); assert not r['source_integrity_errors'], r['source_integrity_errors']"
+          python -I -m zwz_eval --help
+          python -I -m zwz_eval coverage
+          python -I -m zwz_eval init --directory /tmp/zwz-local-project --bench milebench,memlens,mmstar
+      # release-check intentionally exits nonzero while legal/GPU acceptance gates remain open.

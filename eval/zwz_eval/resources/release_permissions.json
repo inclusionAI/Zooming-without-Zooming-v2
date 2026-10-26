@@ -1,0 +1,12 @@
+{
+  "owner_adaptations": {
+    "public_distribution_authorized": true,
+    "confirmed_on": "2026-10-21",
+    "authority": "Direct confirmation by the human project owner",
+    "scope": "Owner-authored evaluation adaptations and authorized contributor changes only",
+    "exclusions": "No third-party code, benchmark data, model weights, credentials or private outputs are relicensed by this confirmation"
+  },
+  "framework_license": "Apache-2.0",
+  "third_party_review_complete": false,
+  "real_data_gpu_acceptance_complete": false
+}

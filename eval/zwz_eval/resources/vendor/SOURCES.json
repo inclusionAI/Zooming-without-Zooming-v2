@@ -1,0 +1,361 @@
+{
+  "note": "Project-adapted snapshots; see THIRD_PARTY_NOTICES.md. Rebuild only during a versioned release.",
+  "files": [
+    {
+      "path": "mmlongbench/arguments.py",
+      "origin_pack_path": "benchmarks/official/MMLongBench/arguments.py",
+      "original_sha256": "2a0e3bf6189e996836352a9d8dee107cdbc005d130fcb0027f23eb89e4096670",
+      "packaged_sha256": "2a0e3bf6189e996836352a9d8dee107cdbc005d130fcb0027f23eb89e4096670",
+      "patches": []
+    },
+    {
+      "path": "mmlongbench/data.py",
+      "origin_pack_path": "benchmarks/official/MMLongBench/data.py",
+      "original_sha256": "2e3f60a37d7c1591025fb26b1fbcb86ec942b9ad2a305b50de1e11a15ab8bab8",
+      "packaged_sha256": "12b8e1dd51aa29ce2b359e20781fd014ed4a114e26677735c33066d28a78e724",
+      "patches": [
+        "Bind the preserved VH fallback cycle [0,1,1,0] to selected-row position, eliminating concurrency/resume-dependent fallback scores. Prompts, ID selection and valid Yes/No parsing are unchanged; this explicit protocol fix requires a new run ID."
+      ]
+    },
+    {
+      "path": "mmlongbench/utils.py",
+      "origin_pack_path": "benchmarks/official/MMLongBench/utils.py",
+      "original_sha256": "d2f2da49a8db761e02c381b33d1a3158984945c3b7092538c57045cb2a3c351e",
+      "packaged_sha256": "4e802a37b2cd6518492d2f345cb8ebe8787d38a89374e3f635af92f35e802b64",
+      "patches": [
+        "English source presentation: explanatory comments normalized; original docstring values retained as Unicode escapes; non-English runtime literals escaped without changing executable AST or literal values."
+      ]
+    },
+    {
+      "path": "mmlongbench/utils_prompt.py",
+      "origin_pack_path": "benchmarks/official/MMLongBench/utils_prompt.py",
+      "original_sha256": "3228689d5db62b11c3615247265a527b050280c292a17d2689dd8c45f352c228",
+      "packaged_sha256": "3228689d5db62b11c3615247265a527b050280c292a17d2689dd8c45f352c228",
+      "patches": []
+    },
+    {
+      "path": "mmlongbench/eval_api_batch.py",
+      "origin_pack_path": "benchmarks/official/MMLongBench/eval_api_batch.py",
+      "original_sha256": "9f088358218a7ab860d283ff7e0993b609ee8f0caa9ce11e1c028e95d50ac961",
+      "packaged_sha256": "133bd7738bc3ebe261124e0f2cc5e9651afe941a9570550ef52e30c94af40666",
+      "patches": [
+        "Propagate native task errors in explicitly selected strict wrapper mode; preserve default upstream prompts, sampling, parsing and metrics.",
+        "Project namespace renamed consistently; benchmark algorithms, prompts and generation/scoring parameters unchanged."
+      ]
+    },
+    {
+      "path": "mmlongbench/vlm_model/__init__.py",
+      "origin_pack_path": "benchmarks/official/MMLongBench/vlm_model/__init__.py",
+      "original_sha256": "533b1ac5f31a44a8f3c03ebfcef25b1fdd33ffc524e0cbd3a29650a73ecaa964",
+      "packaged_sha256": "6e127acfc2a1a6023d8d57aa49b5025fc04e1ed706d81321889653d57ba73ddb",
+      "patches": [
+        "Prioritize explicitly selected compatible API backend over model-name heuristics."
+      ]
+    },
+    {
+      "path": "mmlongbench/vlm_model/model_utils.py",
+      "origin_pack_path": "benchmarks/official/MMLongBench/vlm_model/model_utils.py",
+      "original_sha256": "13314ffe84d5bb7dc92ea0fcd2a37c8484c84d6f35bf3ab49018567fe8c481db",
+      "packaged_sha256": "13314ffe84d5bb7dc92ea0fcd2a37c8484c84d6f35bf3ab49018567fe8c481db",
+      "patches": []
+    },
+    {
+      "path": "mmlongbench/vlm_model/vllm_models.py",
+      "origin_pack_path": "benchmarks/official/MMLongBench/vlm_model/vllm_models.py",
+      "original_sha256": "82c6841bea8d9418b33d625839bccddb3841e67863c9bf387ab610f4886a4e57",
+      "packaged_sha256": "924be9f552043747761c23e0bbcf64c6c79ed41f880d212346b4c9850f22ba83",
+      "patches": [
+        "Read main API key from environment; no request/prompt metric changes.",
+        "Read main API key from environment; propagate transport/malformed-response errors without caching synthetic empty answers; preserve valid empty output with token accounting and finish metadata. No generation/prompt/parser/metric changes."
+      ]
+    },
+    {
+      "path": "mmlongbench/vlm_model/openai_model.py",
+      "origin_pack_path": "benchmarks/official/MMLongBench/vlm_model/openai_model.py",
+      "original_sha256": "d5b9a74cb793627c96b276f4a984e648ffd2daa48cbcab26e9087776d01093b0",
+      "packaged_sha256": "d5b9a74cb793627c96b276f4a984e648ffd2daa48cbcab26e9087776d01093b0",
+      "patches": []
+    },
+    {
+      "path": "memlens/judge.py",
+      "origin_pack_path": "benchmarks/submit_bench/judge_memlens_official.py",
+      "original_sha256": "b85638d519d69d9c20363f767c43df58ea08e2c89e21529897f9a360fc29056a",
+      "packaged_sha256": "a31dc38530d90223e381dcb6a0ae165be942037fd85b92fd263d386248711642",
+      "patches": [
+        "Read judge API key from environment by default; no rubric changes.",
+        "English source presentation: explanatory comments normalized; original docstring values retained as Unicode escapes; non-English runtime literals escaped without changing executable AST or literal values."
+      ]
+    },
+    {
+      "path": "milebench/score.py",
+      "origin_pack_path": "benchmarks/submit_bench/cal_milebench_with_llm.py",
+      "original_sha256": "3173cdc4599984f90ef9d23d1f329b20724a5cf83321f4f7bf6c820de206c89c",
+      "packaged_sha256": "abd245d0262350ec9b5935ccf47059d1a54847f02a607eb8af49cd8adba6d9f3",
+      "patches": [
+        "Replace legacy output default; no metric changes.",
+        "Read judge API key from environment; optional strict transport errors; no metric/prompt changes.",
+        "2026-10-25: remove private experiment defaults; require explicit model selection from caller configuration. Route independent judge requests across all configured endpoints with thread-safe round robin, retaining the selected endpoint for retries. Prompt, request parameters, concurrency, cache keys and metric functions unchanged.",
+        "English source presentation: explanatory comments normalized; original docstring values retained as Unicode escapes; non-English runtime literals escaped without changing executable AST or literal values.",
+        "Project namespace renamed consistently; benchmark algorithms, prompts and generation/scoring parameters unchanged."
+      ]
+    },
+    {
+      "path": "common/infer.py",
+      "origin_pack_path": "benchmarks/mimic_eval/infer.py",
+      "original_sha256": "74c2fb3b1e47596b2bd2ec77564a5cbb0f906a4c267866dec8de3d096e66b9af",
+      "packaged_sha256": "6f075cf4b5964229ab95c5852a4e64f1e8313d7654a5a931119ef643481e2fac",
+      "patches": [
+        "Remove private default image search root; callers pass explicit image roots.",
+        "English source presentation: explanatory comments normalized; original docstring values retained as Unicode escapes; non-English runtime literals escaped without changing executable AST or literal values.",
+        "Remove the retired benchmark-only formatter and dispatch branch; retained benchmark formatter behavior is unchanged."
+      ]
+    },
+    {
+      "path": "memlens/prepare.py",
+      "origin_pack_path": "project-role-preserving-memlens-converter",
+      "original_sha256": "ebaac5f32620091c7f4f86eaeaaa30a8822da79b954be477fe2ea2a32db4baa6",
+      "packaged_sha256": "ebaac5f32620091c7f4f86eaeaaa30a8822da79b954be477fe2ea2a32db4baa6",
+      "patches": []
+    },
+    {
+      "path": "agentvista/score_final_answers.py",
+      "origin_pack_path": "agentvista/score_final_answers.py",
+      "original_sha256": "bfc9ebe6eb4364d5ec365b6d33d8fb67456fc5555b1b020a2c928f78b9844460",
+      "packaged_sha256": "bfc9ebe6eb4364d5ec365b6d33d8fb67456fc5555b1b020a2c928f78b9844460",
+      "patches": []
+    },
+    {
+      "path": "agentvista/infer.py",
+      "origin_pack_path": "agentvista/infer.py",
+      "original_sha256": "ba4f1a1c8e72d45c3650febeaeffc680037c086cd8871cdd31194e7612335f3a",
+      "packaged_sha256": "ba4f1a1c8e72d45c3650febeaeffc680037c086cd8871cdd31194e7612335f3a",
+      "patches": []
+    },
+    {
+      "path": "agentvista/tools/code_interpreter.py",
+      "origin_pack_path": "agentvista/tools/code_interpreter.py",
+      "original_sha256": "a9a76c4a6cdf00d852ec72d4453b401ea6b061ed85211eee5478e4e55bd8fe9a",
+      "packaged_sha256": "a9a76c4a6cdf00d852ec72d4453b401ea6b061ed85211eee5478e4e55bd8fe9a",
+      "patches": []
+    },
+    {
+      "path": "agentvista/tools/visit.py",
+      "origin_pack_path": "agentvista/tools/visit.py",
+      "original_sha256": "b6040f52fd521003fa15d9b0809c1f22797d0f6a57c2c16deaf73edf3d44689a",
+      "packaged_sha256": "b6040f52fd521003fa15d9b0809c1f22797d0f6a57c2c16deaf73edf3d44689a",
+      "patches": []
+    },
+    {
+      "path": "agentvista/tools/tool_registry.py",
+      "origin_pack_path": "agentvista/tools/tool_registry.py",
+      "original_sha256": "9075a620c21644505eede4f0d24816b9f0ccfbda9d60c9b200e539b630ae1ea1",
+      "packaged_sha256": "9075a620c21644505eede4f0d24816b9f0ccfbda9d60c9b200e539b630ae1ea1",
+      "patches": []
+    },
+    {
+      "path": "agentvista/tools/__init__.py",
+      "origin_pack_path": "agentvista/tools/__init__.py",
+      "original_sha256": "1100931b1657fa9ea83e15a6f3ed0273eba1b95cedd81c1f126ba72a449e778b",
+      "packaged_sha256": "1100931b1657fa9ea83e15a6f3ed0273eba1b95cedd81c1f126ba72a449e778b",
+      "patches": []
+    },
+    {
+      "path": "agentvista/tools/image_search.py",
+      "origin_pack_path": "agentvista/tools/image_search.py",
+      "original_sha256": "993c8aa3a6b1fe579d3afd88d6dd71a5a310fe7871404909e6a62ab009b02af9",
+      "packaged_sha256": "993c8aa3a6b1fe579d3afd88d6dd71a5a310fe7871404909e6a62ab009b02af9",
+      "patches": []
+    },
+    {
+      "path": "agentvista/tools/free_backends.py",
+      "origin_pack_path": "agentvista/tools/free_backends.py",
+      "original_sha256": "ee9226318f248119ca51b8e40e064b7e6f1733da203ba2a9ef38aef4609f8fd5",
+      "packaged_sha256": "ee9226318f248119ca51b8e40e064b7e6f1733da203ba2a9ef38aef4609f8fd5",
+      "patches": []
+    },
+    {
+      "path": "agentvista/tools/web_search.py",
+      "origin_pack_path": "agentvista/tools/web_search.py",
+      "original_sha256": "7acae0e5ef732f1d4abccc8d571a654555cf681086ad7bf702cf15edccb5e85a",
+      "packaged_sha256": "7acae0e5ef732f1d4abccc8d571a654555cf681086ad7bf702cf15edccb5e85a",
+      "patches": []
+    },
+    {
+      "path": "agentvista/tools/base.py",
+      "origin_pack_path": "agentvista/tools/base.py",
+      "original_sha256": "635407c0627826c72edf8d748136d23893f3f4c4b22831bec4cafe8ceae12203",
+      "packaged_sha256": "635407c0627826c72edf8d748136d23893f3f4c4b22831bec4cafe8ceae12203",
+      "patches": []
+    },
+    {
+      "path": "agentvista/utils/tool_schema_builder.py",
+      "origin_pack_path": "agentvista/utils/tool_schema_builder.py",
+      "original_sha256": "36ce98479e73b9d09cc6c1953cbe3275dbeab5798ad85d0bc0ff28152362e534",
+      "packaged_sha256": "36ce98479e73b9d09cc6c1953cbe3275dbeab5798ad85d0bc0ff28152362e534",
+      "patches": []
+    },
+    {
+      "path": "agentvista/utils/context_utils.py",
+      "origin_pack_path": "agentvista/utils/context_utils.py",
+      "original_sha256": "84a03a27299bfa138b0b345e5bc915a24800c9c4933d3b61efdccfbd511e91fe",
+      "packaged_sha256": "84a03a27299bfa138b0b345e5bc915a24800c9c4933d3b61efdccfbd511e91fe",
+      "patches": []
+    },
+    {
+      "path": "agentvista/utils/__init__.py",
+      "origin_pack_path": "agentvista/utils/__init__.py",
+      "original_sha256": "ed0dc1c725c44e4b77b66e6dae1b8b4f22fc3e810238ad1088afb42945404764",
+      "packaged_sha256": "ed0dc1c725c44e4b77b66e6dae1b8b4f22fc3e810238ad1088afb42945404764",
+      "patches": []
+    },
+    {
+      "path": "agentvista/utils/general_qa_tool.py",
+      "origin_pack_path": "agentvista/utils/general_qa_tool.py",
+      "original_sha256": "1aea9f28fd4a53e40f3b48f0058b5ff8260c31518f90476c924005c724faea79",
+      "packaged_sha256": "1aea9f28fd4a53e40f3b48f0058b5ff8260c31518f90476c924005c724faea79",
+      "patches": []
+    },
+    {
+      "path": "agentvista/utils/function_call_parser.py",
+      "origin_pack_path": "agentvista/utils/function_call_parser.py",
+      "original_sha256": "b5a61d325815901ad275ad1f0c25db7d74616ed41e787c529f3d58ddd5bfeb66",
+      "packaged_sha256": "b5a61d325815901ad275ad1f0c25db7d74616ed41e787c529f3d58ddd5bfeb66",
+      "patches": []
+    },
+    {
+      "path": "agentvista/utils/result_utils.py",
+      "origin_pack_path": "agentvista/utils/result_utils.py",
+      "original_sha256": "2991aa23b22565999ee46de19b0222084d786c653dbe5fd38e98399615f999a6",
+      "packaged_sha256": "2991aa23b22565999ee46de19b0222084d786c653dbe5fd38e98399615f999a6",
+      "patches": []
+    },
+    {
+      "path": "agentvista/search/tree.py",
+      "origin_pack_path": "agentvista/search/tree.py",
+      "original_sha256": "0d1f1aa4b53f257c9756aca82248a5ede644b55519d7e0bb81729d0eb5917b70",
+      "packaged_sha256": "0d1f1aa4b53f257c9756aca82248a5ede644b55519d7e0bb81729d0eb5917b70",
+      "patches": []
+    },
+    {
+      "path": "agentvista/search/__init__.py",
+      "origin_pack_path": "agentvista/search/__init__.py",
+      "original_sha256": "dfd5f312c73e6fd7d8e5d06d2c1447e1df015b3ab7d21f2be741509fbe820c06",
+      "packaged_sha256": "dfd5f312c73e6fd7d8e5d06d2c1447e1df015b3ab7d21f2be741509fbe820c06",
+      "patches": []
+    },
+    {
+      "path": "agentvista/configs/__init__.py",
+      "origin_pack_path": "agentvista/configs/__init__.py",
+      "original_sha256": "31b557cbc6c6bb4c8a7a1ce076067f99f5a5606bc875bd5d6362f2ef99dfb8f1",
+      "packaged_sha256": "31b557cbc6c6bb4c8a7a1ce076067f99f5a5606bc875bd5d6362f2ef99dfb8f1",
+      "patches": []
+    },
+    {
+      "path": "agentvista/configs/tool_configs.yaml",
+      "origin_pack_path": "agentvista/configs/tool_configs.yaml",
+      "original_sha256": "aecb1f3516b6f12279179dbb4ffad0ae6093bf1be82d03460bc82d43238ab800",
+      "packaged_sha256": "aecb1f3516b6f12279179dbb4ffad0ae6093bf1be82d03460bc82d43238ab800",
+      "patches": []
+    },
+    {
+      "path": "agentvista/configs/prompt_loader.py",
+      "origin_pack_path": "agentvista/configs/prompt_loader.py",
+      "original_sha256": "b5f7d707b47a5970792b6e005b31943d0bdac67ecf649f1000dd18e8adee079c",
+      "packaged_sha256": "b5f7d707b47a5970792b6e005b31943d0bdac67ecf649f1000dd18e8adee079c",
+      "patches": []
+    },
+    {
+      "path": "agentvista/prompts/inference_prompts.yaml",
+      "origin_pack_path": "agentvista/prompts/inference_prompts.yaml",
+      "original_sha256": "50bcfb5ee76af6303a2c5117669d55e02287390a88ed81eec3d24f2566b652ef",
+      "packaged_sha256": "50bcfb5ee76af6303a2c5117669d55e02287390a88ed81eec3d24f2566b652ef",
+      "patches": []
+    },
+    {
+      "path": "agentvista/engine/__init__.py",
+      "origin_pack_path": "agentvista/engine/__init__.py",
+      "original_sha256": "9dcf8a73dd34eac720ac6131d5ad0b08e3dcf4a9f08e810915a99018a2ed2840",
+      "packaged_sha256": "9dcf8a73dd34eac720ac6131d5ad0b08e3dcf4a9f08e810915a99018a2ed2840",
+      "patches": []
+    },
+    {
+      "path": "agentvista/engine/api/__init__.py",
+      "origin_pack_path": "agentvista/engine/api/__init__.py",
+      "original_sha256": "0931a7cc110c96110bc5371d1317a28ec11915751e3c0c10076f28796b41814a",
+      "packaged_sha256": "0931a7cc110c96110bc5371d1317a28ec11915751e3c0c10076f28796b41814a",
+      "patches": []
+    },
+    {
+      "path": "agentvista/engine/api/api_tool_handler.py",
+      "origin_pack_path": "agentvista/engine/api/api_tool_handler.py",
+      "original_sha256": "d0feabcd7dd3d7af150fafad7a767c47f9218e4f2e8c9d636d4dc75bf0ffa553",
+      "packaged_sha256": "d0feabcd7dd3d7af150fafad7a767c47f9218e4f2e8c9d636d4dc75bf0ffa553",
+      "patches": []
+    },
+    {
+      "path": "agentvista/engine/api/api_caller.py",
+      "origin_pack_path": "agentvista/engine/api/api_caller.py",
+      "original_sha256": "ffedf2528fca6ea1a9698458fa6fc3385f5b23094730f4dcc5b3e96033b8a388",
+      "packaged_sha256": "274a368cefa982b6be3a4eee17f4491cbf90200c469cfcd3088e745061aeef97",
+      "patches": [
+        "Replace an internal provider name in a comment with provider-neutral wording; Python AST unchanged."
+      ]
+    },
+    {
+      "path": "agentvista/engine/api/api_processors.py",
+      "origin_pack_path": "agentvista/engine/api/api_processors.py",
+      "original_sha256": "160e94a3b047bb3e62046767c619233b28da104648ce905067146a4beb92362f",
+      "packaged_sha256": "160e94a3b047bb3e62046767c619233b28da104648ce905067146a4beb92362f",
+      "patches": []
+    },
+    {
+      "path": "agentvista/engine/api/api_model_caller.py",
+      "origin_pack_path": "agentvista/engine/api/api_model_caller.py",
+      "original_sha256": "3d7f6169d22b520b9dd7a38f55351e6bc0f0983cd0160321f46a1511cdfdcc02",
+      "packaged_sha256": "3d7f6169d22b520b9dd7a38f55351e6bc0f0983cd0160321f46a1511cdfdcc02",
+      "patches": []
+    },
+    {
+      "path": "gui/scripts/eval_grounding_topology.py",
+      "origin_pack_path": "scoring_sources/gui/scripts/eval_grounding_topology.py",
+      "original_sha256": "9a9e57cff0768904822d18848f6de3bb1aaafaefa96fc4b757228304f659ce97",
+      "packaged_sha256": "bb1fbace31db25d71a5c90e8179918ab6a8d0856cc0e3a2d9ea98ce979b76332",
+      "patches": [
+        "2026-10-22: retain sample IDs, original dimensions and model request/finish diagnostics; deterministic report ordering. Primary point-in-box metric unchanged.",
+        "2026-10-24: replace auto-respawning pool with owned non-daemon replicas, explicit GPU groups, bounded startup/inference/shutdown and propagated errors; close each model before moving to the next split. Existing task preparation, worker inference and scoring definitions remain unchanged.",
+        "2026-10-25: honor the caller's CUDA_VISIBLE_DEVICES physical identifiers and order through shared validated GPU grouping; reject empty, duplicate or insufficient allocations. Inference and scoring functions unchanged.",
+        "Project namespace renamed consistently; benchmark algorithms, prompts and generation/scoring parameters unchanged."
+      ]
+    },
+    {
+      "path": "gui/official/screenspot-pro/models/qwen3_5.py",
+      "origin_pack_path": "scoring_sources/gui/official/screenspot-pro/models/qwen3_5.py",
+      "original_sha256": "bcb661a6cde659b3bab1f3e53a2147cd36c210cf1ed7bfb4817e7ea9925b48f7",
+      "packaged_sha256": "2ff3666591380484ce6e2505117dd0b5b4d544e2c7b22061f6faf98da5a933a2",
+      "patches": [
+        "2026-10-22: retain exact legacy parser through a tested shared helper; add separate non-scoring tolerant-parser diagnostics, prompt, dimensions, token/finish traces; bare backend default max_pixels matches the existing wrapper's 8294400. Historical task prompt and primary parsing unchanged.",
+        "2026-10-24: add idempotent engine close supporting the vLLM public shutdown method or v1 engine_core shutdown; report unsupported shutdown instead of silently leaking a model service. Existing prompt, image preprocessing, generation and parsing definitions remain unchanged.",
+        "2026-10-25: use the neutral native_xml diagnostic identifier and neutral comments. Parser, prompt, pixels, generation and point-in-box metric unchanged; no permissive compatibility with prior run contracts.",
+        "Project namespace renamed consistently; benchmark algorithms, prompts and generation/scoring parameters unchanged."
+      ]
+    },
+    {
+      "path": "gui/scripts/replica_lifecycle.py",
+      "origin_pack_path": "new-wrapper-gui-replica-lifecycle",
+      "original_sha256": null,
+      "packaged_sha256": "ad8970e87ac71189d86cb1dd1d1e1cbe684f0a85c2bdcdb5f7e3a8f26ced73bc",
+      "patches": [
+        "2026-10-24: new execution-only helper for explicit GPU assignment, bounded worker initialization/inference/shutdown, error propagation and cleanup of each worker's owned process group. Contains no model, prompt, image or scoring policy and never resamples a failed sample."
+      ]
+    },
+    {
+      "path": "gui/official/screenspot-pro/model_factory.py",
+      "origin_pack_path": "new-wrapper-supported-native-branch",
+      "original_sha256": null,
+      "packaged_sha256": "7e1e3a0843dc5a6ee565f391fed3e7dedd50555a1ba1d76842d929130dd5560d",
+      "patches": [
+        "New minimal factory; preserves only the qwen3_5_vllm native backend."
+      ]
+    }
+  ]
+}

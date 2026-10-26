@@ -1,0 +1,29 @@
+{
+  "model_id": "my-model",
+  "run_id": "evaluation",
+  "output_root": "${EVAL_OUTPUT_ROOT}",
+  "main": {
+    "model": "${MAIN_MODEL_ID}",
+    "base_urls": ["${MAIN_BASE_URL}"],
+    "api_key_env": "MAIN_API_KEY"
+  },
+  "judge": {
+    "model": "${JUDGE_MODEL_ID}",
+    "base_urls": ["${JUDGE_BASE_URL}"],
+    "api_key_env": "JUDGE_API_KEY"
+  },
+  "identity": {
+    "model_revision": "${MAIN_MODEL_REVISION}",
+    "judge_revision": "${JUDGE_MODEL_REVISION}",
+    "chat_template_sha256": "${MAIN_CHAT_TEMPLATE_SHA256}"
+  },
+  "datasets": {
+    "agentvista": {
+      "root": "${AGENTVISTA_DATA_ROOT}",
+      "image_root": "${AGENTVISTA_IMAGE_ROOT}"
+    }
+  },
+  "workers": 16,
+  "timeout": 600,
+  "retries": 3
+}

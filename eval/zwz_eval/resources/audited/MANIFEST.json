@@ -1,0 +1,217 @@
+[
+  {
+    "module": "platform_messages",
+    "source": "perception/core_inference.py",
+    "source_sha256": "9ddf794782c75a0f9252f5b7a11269629be2b424024dd13f563db6429fb9b73c",
+    "excerpt_sha256": "15b0addbf1e9d72ff70be85726cf22e76abaad26d20038e8279d6ca14ca77073",
+    "definitions": [
+      "build_messages"
+    ],
+    "redistribution_review": "pending",
+    "previous_excerpt_sha256": "431a6b49a82c129acf5448159708028b6f7419a5bc1dca2468b3969d3b95130f",
+    "presentation_patch": "English explanatory comments; full AST including original runtime/docstring values preserved using Unicode escapes."
+  },
+  {
+    "module": "erqa_wrong_review",
+    "source": "erqa/judge_wrong.py",
+    "source_sha256": "c84c26b28c5465ec29099abca885f7bf89c7f32cb696ed4ba5af204dfb96f34c",
+    "excerpt_sha256": "0467c14a8b657ae021f93f1941df325b0ba83b8eeef29e41039888a751188c96",
+    "definitions": [
+      "parse_json"
+    ],
+    "redistribution_review": "pending"
+  },
+  {
+    "module": "erqa_initial_review",
+    "source": "erqa/judge_initial.py",
+    "source_sha256": "a89158c880281739178480a48d8499f07c63ed3d253c529d5c135ae6b99ff515",
+    "excerpt_sha256": "490982505404d3eca4d2987ef28217129b1d4501c852266a1bc91b5dd78d883d",
+    "definitions": [
+      "parse_json"
+    ],
+    "redistribution_review": "pending"
+  },
+  {
+    "module": "spar_review",
+    "source": "spar/llm_audit.py",
+    "source_sha256": "6ff77baa113fedd94ca59487cf7e0a970b431a6fa38076d4e090f83981735332",
+    "excerpt_sha256": "a165372c37b38aa3b5eee10d197b7c1cd8c7eb2f939ccfb55563c3f8adf5b8c2",
+    "definitions": [
+      "JUDGE_SYSTEM",
+      "parse_json"
+    ],
+    "redistribution_review": "pending"
+  },
+  {
+    "module": "mmsi_original",
+    "source": "mmsi/score.py",
+    "source_sha256": "d0c81246b60a2022a7c4b08ae59a89241bdadc52b727ac734a178a5869faeeba",
+    "excerpt_sha256": "39592067701f230c3ad34d8f643afcfd19fd276bb2382ca93de17497a7db1a67",
+    "definitions": [
+      "extract_choice"
+    ],
+    "redistribution_review": "pending"
+  },
+  {
+    "module": "mmsi_final",
+    "source": "mmsi/score_rerun.py",
+    "source_sha256": "9cb9f50645894bbd07b45f3de9c1a112360b6c3b57127a30a56d2479068166b5",
+    "excerpt_sha256": "dfaf7e855d4440e724375510fae07c38fd6551a044a1fd2f5d340d0a3482844c",
+    "definitions": [
+      "extract_choice"
+    ],
+    "redistribution_review": "pending"
+  },
+  {
+    "module": "viewspatial",
+    "source": "viewspatial/score.py",
+    "source_sha256": "708e7c11afe15f24553574748b3e32c39c9bcaf23b9dcc0ac8fb57b24a34a8b2",
+    "excerpt_sha256": "a08743cc2e1ffc77214722b3946a26590b93cb24911e86056813ff99662ab3ee",
+    "definitions": [
+      "extract_answer"
+    ],
+    "redistribution_review": "pending"
+  },
+  {
+    "module": "erqa",
+    "source": "erqa/adapter.py",
+    "source_sha256": "6943448e28e025464b243421a52e129490886a1e550d6161287197cf890e63b9",
+    "excerpt_sha256": "6b9dc2c77731059e9debf9fbc6125d29e91ce6cba056bdeccfbd06ccea9c0c4a",
+    "definitions": [
+      "extract_choice"
+    ],
+    "redistribution_review": "pending",
+    "previous_excerpt_sha256": "43e913bb941a226e01139e7fed73f087b68ddbd73b45f79691c2b5c1a7e54b27",
+    "presentation_patch": "English explanatory comments; full AST including original runtime/docstring values preserved using Unicode escapes."
+  },
+  {
+    "module": "mindcube",
+    "source": "mindcube/extractors.py",
+    "source_sha256": "b2be770533a07259a765d3258f80f8b1b93c474342e641e2efce0bc22ad912d0",
+    "excerpt_sha256": "e07774f0b285148adc26bc15548027513522c4ca0e96c87d3fdc1e8a90eed2ed",
+    "definitions": [
+      "extract_answer",
+      "get_setting_from_id"
+    ],
+    "redistribution_review": "pending"
+  },
+  {
+    "module": "platform",
+    "source": "perception/parsers.py",
+    "source_sha256": "b2addd8b8cd5c56d586fa7162b6770fd12cff119af209cf3b2a5cb4df72850c0",
+    "excerpt_sha256": "d7739d0757039dbe43be0a57fbfafb91a0a717f858759aebf0429518f8562775",
+    "definitions": [
+      "parse_answer_tag",
+      "parse_first_letter"
+    ],
+    "redistribution_review": "pending",
+    "previous_excerpt_sha256": "40db42d28d85880f4cdacba3de5639e97e4f68fd52d6221c410115771deb7eb1",
+    "presentation_patch": "English explanatory comments; full AST including original runtime/docstring values preserved using Unicode escapes."
+  },
+  {
+    "module": "mimic_listing",
+    "source": "mimic/listing.py",
+    "source_sha256": "273fd3ea2fa83816a0732e9ebae03da32d4105fe2c9da74c20e2cd544949ea52",
+    "excerpt_sha256": "9a2d0edaa212dd9efaf3bc9ad73d9ffccb3f901afd34b9eea5e4aea3231dc799",
+    "definitions": [
+      "NOISE_PATTERNS",
+      "BULLET_RE",
+      "NUM_PREFIX_RE",
+      "TRAILING_PUNCT_RE",
+      "parse_model_answer_to_objects",
+      "gt_objects_from_response"
+    ],
+    "redistribution_review": "pending",
+    "previous_excerpt_sha256": "dd39b0c749fc0861e00c682eb0e3d7093069ead9ce052e8d393e2bfca7f417b4",
+    "presentation_patch": "English explanatory comments; full AST including original runtime/docstring values preserved using Unicode escapes."
+  },
+  {
+    "module": "mimic_judge",
+    "source": "mimic/judge.py",
+    "source_sha256": "88d1e1e5888f222a2ce2b5ecd5c4da509d6f57870ff75427fdfb011d105fd8c6",
+    "excerpt_sha256": "8fc7bf4dd5d68eb6bb16f2965d95fb7be4ad86f7a64b0062eacb6cf75815ffb2",
+    "definitions": [
+      "PROMPT_TEMPLATE",
+      "SUBSTITUTIONS",
+      "REMOVED_EXPRESSIONS",
+      "normalize_final_answer",
+      "string_match",
+      "parse_llm_judge_response",
+      "extract_answer"
+    ],
+    "redistribution_review": "pending",
+    "previous_excerpt_sha256": "996e8553051aaa76a32536b900b29b66bcf2ddc1b4cca7d79bad9754e467e44a",
+    "presentation_patch": "English explanatory comments; full AST including original runtime/docstring values preserved using Unicode escapes."
+  },
+  {
+    "module": "spar",
+    "source": "spar/adapter.py",
+    "source_sha256": "592ae9edf67049de9e3d458f282f5d71482de52123afe6d22cad59696d1f1646",
+    "excerpt_sha256": "dd471b4af9407e997aa2b2c206ebe4884361371a0b9aa28f90ae18528caa10b5",
+    "definitions": [
+      "MCA",
+      "NA",
+      "MULTIVIEW_NA",
+      "ANSWER_FORMAT_SYSTEM",
+      "LOW",
+      "MIDDLE",
+      "HIGH",
+      "official_prompt",
+      "exact_match",
+      "first_number",
+      "mra",
+      "parse_instruction",
+      "view_change_score",
+      "extract_final_answer",
+      "official_score"
+    ],
+    "redistribution_review": "pending"
+  },
+  {
+    "module": "chartography",
+    "source": "chartography/judge.py",
+    "source_sha256": "50f3e3367feb66f874bc1906b083ec4a2e681959aac700dbd1883fce80addb84",
+    "excerpt_sha256": "186cc1bd95a4eae30e7f7b23447d4745a4bcfe5991e18c002d553ff967935cf1",
+    "definitions": [
+      "JUDGE_PROMPT_TEMPLATE",
+      "JUDGE_GUIDED_JSON",
+      "_judge_prompt",
+      "_parse_verdict",
+      "_verdict_passes"
+    ],
+    "redistribution_review": "pending",
+    "previous_excerpt_sha256": "256da8f5cb848af629b5649f2dcfb80441060fdba80cb24003d39500f8c7a549",
+    "presentation_patch": "English explanatory comments; full AST including original runtime/docstring values preserved using Unicode escapes."
+  },
+  {
+    "module": "chartography_guard",
+    "source": "chartography/guard.py",
+    "source_sha256": "3829ad6f4c465fa9a9d2eae0f5c13bd640d90809ebc2006bb657f412b10e2e56",
+    "excerpt_sha256": "21f66ef8c77e2744a1c5506e73b6b5839eb4538a5fe067d5b0fbe3c00f275ae0",
+    "definitions": [
+      "valid_verdict"
+    ],
+    "redistribution_review": "pending"
+  },
+  {
+    "module": "chartography_rule",
+    "source": "chartography/infer.py",
+    "source_sha256": "d9dd5e26c513f0e8484264318c69a1b8b11a260a9e9f2d5b788abf70868da99f",
+    "excerpt_sha256": "f692482d84e596958d077deeac4775ae218985f5f823ec721a6e5dfe58de01b3",
+    "definitions": [
+      "_NUM",
+      "_RANGE_RE",
+      "_to_float",
+      "_parse_ranges",
+      "_extract_numbers",
+      "_norm",
+      "_extract_final_answer",
+      "_tokenize_set",
+      "_normalize_answer",
+      "score_one"
+    ],
+    "redistribution_review": "pending",
+    "previous_excerpt_sha256": "34d45c394efbbe13c1cec0e2fd403dc1b1ae2738456d15e9859d5d009e2362bd",
+    "presentation_patch": "English explanatory comments; full AST including original runtime/docstring values preserved using Unicode escapes."
+  }
+]

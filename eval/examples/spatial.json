@@ -1,0 +1,39 @@
+{
+  "model_id": "my-model",
+  "run_id": "project-spatial-v1",
+  "output_root": "../outputs",
+  "main": {
+    "model": "my-model",
+    "base_urls": [
+      "http://127.0.0.1:8000/v1", "http://127.0.0.1:8001/v1",
+      "http://127.0.0.1:8002/v1", "http://127.0.0.1:8003/v1",
+      "http://127.0.0.1:8004/v1", "http://127.0.0.1:8005/v1",
+      "http://127.0.0.1:8006/v1", "http://127.0.0.1:8007/v1",
+      "http://127.0.0.1:8008/v1", "http://127.0.0.1:8009/v1",
+      "http://127.0.0.1:8010/v1", "http://127.0.0.1:8011/v1",
+      "http://127.0.0.1:8012/v1", "http://127.0.0.1:8013/v1",
+      "http://127.0.0.1:8014/v1", "http://127.0.0.1:8015/v1"
+    ],
+    "api_key_env": "MAIN_API_KEY"
+  },
+  "judge": {
+    "model": "Qwen3.6-35B-A3B",
+    "base_urls": [
+      "http://127.0.0.1:9000/v1", "http://127.0.0.1:9001/v1",
+      "http://127.0.0.1:9002/v1", "http://127.0.0.1:9003/v1",
+      "http://127.0.0.1:9004/v1", "http://127.0.0.1:9005/v1",
+      "http://127.0.0.1:9006/v1", "http://127.0.0.1:9007/v1"
+    ],
+    "api_key_env": "JUDGE_API_KEY"
+  },
+  "identity": {"model_path": "../models/my-checkpoint", "judge_model_path": "../models/Qwen3.6-35B-A3B", "model_revision": "RECORD_ACTUAL_REVISION", "chat_template_sha256": "RECORD_ACTUAL_HASH"},
+  "hardware": {"gpus": 16, "tp": 1, "judge_tp": 2, "memory_utilization": 0.88},
+  "datasets": {
+    "mmsi": {"root": "../data/mmsi/prepared"},
+    "viewspatial": {"root": "../data/viewspatial/prepared", "image_root": "../data/viewspatial/original"},
+    "mindcube": {"root": "../data/mindcube/prepared", "image_root": "../data/mindcube/original"}
+  },
+  "workers": 16,
+  "timeout": 600,
+  "retries": 3
+}

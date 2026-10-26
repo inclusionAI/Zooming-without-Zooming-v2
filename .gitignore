@@ -1,0 +1,35 @@
+# --- Secrets / local config (keep the .example templates) ---
+configs/local_env.sh
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# --- Data / artifacts (regenerate from the pipeline; not shipped) ---
+data_synthesis/data/
+data_synthesis/experiments/
+data_synthesis/outputs/
+*.parquet
+*.jsonl
+*.partial.jsonl
+*.parquet.partial.jsonl
+
+# --- Training outputs ---
+outputs/
+runs/
+*.ckpt
+*.safetensors
+
+# --- OS / editor ---
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+# --- Local assistant config ---
+.claude/

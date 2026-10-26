@@ -1,0 +1,207 @@
+{
+  "checked_on": "2026-10-20",
+  "verification": "Anonymous Hugging Face metadata requests and primary project references; large dataset payloads were not downloaded. Observed revisions are source locations, not certification of historical subset parity.",
+  "benchmarks": {
+    "chartography": {
+      "repo": "surgeai/chartography",
+      "upstream": "https://github.com/surge-ai/chartography",
+      "provenance": "official_documented",
+      "observed_http_status": 401,
+      "observed_revision": null,
+      "note": "Official README names this HF repository, but anonymous access returned 401. Obtain access or an authorized local release. The two GitHub dummy samples are NOT the 100-question benchmark. Import original data.parquet plus charts with prepare --bench chartography. No public accessibility or dataset redistribution is claimed."
+    },
+    "mimic": {
+      "repo": "anurag4446/mimic",
+      "upstream": "https://github.com/anurag-198/MIMIC",
+      "provenance": "official_project_link",
+      "observed_http_status": 200,
+      "observed_revision": "c72200af5307e44bb9035c97bdec24444a0c2cef",
+      "note": "Use common/oddone/listing 1000 each and balanced Counting 5000, not the unbalanced extension or raw-ID-deduplicated 2500. The current prepare entry expects the project's normalized mimic_*.json and ordered images; downloading HF Parquet does not by itself recreate that normalization."
+    },
+    "mmsi": {
+      "repo": "RunsenXu/MMSI-Bench",
+      "upstream": "https://github.com/InternRobotics/MMSI-Bench",
+      "provenance": "author_release",
+      "observed_http_status": 200,
+      "observed_revision": "ec7c92bfaf7728fcca1d61e3e224e190af309436",
+      "note": "Use MMSI_Bench.parquet and the existing prepare --bench mmsi path; preserve 1000 examples and original ordered image bytes."
+    },
+    "spar": {
+      "repo": "jasonzhango/SPAR-Bench",
+      "upstream": "https://github.com/LogosRoboticsGroup/SPAR",
+      "provenance": "official_project_link",
+      "observed_http_status": 200,
+      "observed_revision": "ee122877c25c8bb08539b07e06d872152c9968f1",
+      "note": "Download the four data/test-*.parquet shards, not SPAR-7M training data, Tiny or RGBD. Existing prepare imports all four shards and requires the project profile's 7211 rows/20 tasks. Upstream README says 7207; do not silently reduce the denominator to match that prose."
+    },
+    "mmlongbench": {
+      "repo": "ZhaoweiWang/MMLongBench",
+      "upstream": "https://github.com/EdinburghNLP/MMLongBench",
+      "provenance": "official_project_link",
+      "observed_http_status": 200,
+      "observed_revision": "746b5c42518390e5c3b71d168d0dc49c78824142",
+      "note": "Extract 0_mmlb_data.tar.gz, 1_vrag_image.tar.gz, 2_mm-niah_image.tar.gz and 2_vh_image.tar.gz. Evaluate the selected five visual families at K8/16/32/64/128 only. Downloading the whole repository may also fetch unused ICL/Counting/document assets."
+    },
+    "milebench": {
+      "repo": "FreedomIntelligence/MileBench",
+      "upstream": "https://github.com/MileBench/MileBench",
+      "provenance": "official_project_link",
+      "observed_http_status": 200,
+      "observed_revision": "53c7a58051ef88bacf76541d91f03f5ba2d71e7d",
+      "note": "Download all MileBench_part*.tar.gz components and follow the release's archive instructions. Existing prepare converts the original task JSON/images into the project test29 profile; do not mix adv scores."
+    },
+    "memlens": {
+      "repo": "xiyuRenBill/MEMLENS",
+      "upstream": "https://github.com/xrenaf/MEMLENS",
+      "provenance": "official_project_link",
+      "observed_http_status": 200,
+      "observed_revision": "afa101a1907cc37db40b50d649547964387b96b7",
+      "note": "Use all four context annotations and referenced images, retain session/system/date and message order, then prepare --bench memlens with the original release image root. Each context must contain 789 questions."
+    },
+    "erqa": {
+      "repo": "RunsenXu/ERQA",
+      "upstream": "https://github.com/embodiedreasoning/ERQA",
+      "official_data_url": "https://github.com/embodiedreasoning/ERQA/tree/main/data",
+      "provenance": "converted_mirror",
+      "observed_http_status": 200,
+      "observed_revision": "0629a9bca1d42af3af8a5f8c15adfc70c2d44654",
+      "note": "HF provides converted Parquet/TSV with visual_indices already applied and image order changed. The project's existing prepare expects ORIGINAL data/erqa.tfrecord from the official GitHub release. Do not pass converted Parquet to that importer or apply visual_indices twice."
+    },
+    "viewspatial": {
+      "repo": "lidingm/ViewSpatial-Bench",
+      "upstream": "https://huggingface.co/datasets/lidingm/ViewSpatial-Bench",
+      "provenance": "author_release",
+      "observed_http_status": 200,
+      "observed_revision": "95d9ea3a94da7190bd19d2539ff661f93dba21dd",
+      "note": "Use ViewSpatial-Bench.json plus scannetv2_val.zip and val2017.zip; preserve paths and 5712 records. Run existing prepare --bench viewspatial before inference."
+    },
+    "mindcube": {
+      "repo": "MLL-Lab/MindCube",
+      "upstream": "https://github.com/mll-lab-nu/MindCube",
+      "provenance": "official_project_link",
+      "observed_http_status": 200,
+      "observed_revision": "9c941b46a6bd65b6914669ef7a579948fc9c8467",
+      "note": "Extract data.zip and follow the official raw_qa generation instructions. Import MindCube_tinybench_raw_qa.jsonl, not the full benchmark or cognitive-map prompts. Project Tiny distribution is 250 around/200 rotation/600 among. A raw Tiny JSONL is not automatically the raw_qa input_prompt schema."
+    },
+    "agentvista": {
+      "repo": "Warrieryes/AgentVista",
+      "upstream": "https://github.com/hkust-nlp/AgentVista",
+      "provenance": "official_project_link",
+      "observed_http_status": 200,
+      "observed_revision": "61de767ad8c72e258ac71a0aef952b89ca920a16",
+      "note": "Run existing prepare --bench agentvista on the downloaded Parquet directory; requires the selected 209 questions, exports original image bytes and preserves the project's free-tool/final-answer scoring profile."
+    },
+    "screenspot_pro": {
+      "repo": "likaixin/ScreenSpot-Pro",
+      "upstream": "https://github.com/likaixin2000/ScreenSpot-Pro-GUI-Grounding",
+      "provenance": "official_project_link",
+      "observed_http_status": 200,
+      "observed_revision": "210e78d3844251110bff86c95835ebd37a6930fa",
+      "note": "Obtain annotations and full original screenshot assets, not resized thumbnails or another split. Project profile requires 1581 en/positive/instruction tasks. Check current archive contents before extraction."
+    },
+    "ui_vision": {
+      "repo": "ServiceNow/ui-vision",
+      "upstream": "https://github.com/uivision/UI-Vision",
+      "provenance": "official_project_link",
+      "observed_http_status": 200,
+      "observed_revision": "766c66aeffef16608d4916525902d9fb2598d7ce",
+      "note": "Use original images and annotations/element_grounding basic/functional/spatial; preserve the 1772/1772/1935 project denominators. Layout/action tasks are not part of this reported profile."
+    },
+    "mmstar": {
+      "repo": "Lin-Chen/MMStar",
+      "upstream": "https://mmstar-benchmark.github.io/",
+      "provenance": "official_project_link",
+      "observed_http_status": 200,
+      "observed_revision": "bc98d668301da7b14f648724866e57302778ab27",
+      "note": "HF mmstar.parquet/TSV is original data. The platform preparation entry expects the authorized 1500-row project-normalized query/system/response/images release, preserving exact option and prompt formatting; upstream download alone is not that conversion."
+    },
+    "babyvision": {
+      "repo": "UnipatAI/BabyVision",
+      "upstream": "https://github.com/UniPat-AI/BabyVision",
+      "provenance": "official_project_link",
+      "observed_http_status": 200,
+      "observed_revision": "849cbeea2b1d00ad334e9e1e2b49a1960c9ff3f3",
+      "note": "Use the 388-question BabyVision benchmark, not BabyVision-Gen (280). Project platform preparation expects the normalized original query/system/gold/custom-judge format, not the separate upstream boxed-answer scorer."
+    },
+    "vstar": {
+      "repo": "craigwu/vstar_bench",
+      "upstream": "https://github.com/penghao-wu/vstar",
+      "provenance": "author_release",
+      "observed_http_status": 200,
+      "observed_revision": "d9ae62c903da0c98336e85c5ee89cd863b04b4da",
+      "note": "191 high-resolution image questions: direct_attributes (115) and relative_position (76), not OCR/GPT4V-hard or the unrelated video V-STaR dataset. convert reads the paired original JSON/JPG folders, verifies all 191 raw metadata fingerprints, and restores project shortened options and fixed option order with content-free field slices. The official original options[0] determines the gold after reordering. Legacy prepare still imports project-normalized JSONL."
+    },
+    "hr4k": {
+      "repo": "DreamMr/HR-Bench",
+      "upstream": "https://github.com/DreamMr/HR-Bench",
+      "provenance": "official_project_link",
+      "observed_http_status": 200,
+      "observed_revision": "83b9013d6293b85dc507e87199ca52517536939c",
+      "note": "Use hr_bench_4k.parquet or matching TSV, 800 rows. It shares the download repository with HR-8K but not its split. Project prepare expects the retained hrbench-4k-shuf-imgplaceholder.jsonl normalization."
+    },
+    "hr8k": {
+      "repo": "DreamMr/HR-Bench",
+      "upstream": "https://github.com/DreamMr/HR-Bench",
+      "provenance": "official_project_link",
+      "observed_http_status": 200,
+      "observed_revision": "83b9013d6293b85dc507e87199ca52517536939c",
+      "note": "Use hr_bench_8k.parquet or matching TSV, 800 rows; do not replace with HR-4K images. Project prepare expects hrbench-8k-shuf-imgplaceholder.jsonl."
+    },
+    "mme_en": {
+      "repo": "yifanzhang114/MME-RealWorld",
+      "upstream": "https://github.com/yfzhang114/MME-RealWorld",
+      "provenance": "official_project_link",
+      "observed_http_status": 200,
+      "observed_revision": "741cb8831ac86085bd54f678d13ca193e2334114",
+      "note": "Use MME_RealWorld.json and original image archives, 23609 normalized QA rows; not classic MME or MME-RealWorld-Lite. Some image archives are split parts. Project platform importer expects mme-realworld-shuf-NasPic-imgplaceholder.jsonl."
+    },
+    "mme_cn": {
+      "repo": "yifanzhang114/MME-RealWorld",
+      "upstream": "https://github.com/yfzhang114/MME-RealWorld",
+      "provenance": "official_project_link",
+      "observed_http_status": 200,
+      "observed_revision": "741cb8831ac86085bd54f678d13ca193e2334114",
+      "note": "Use MME_RealWorld_CN.json and the matching Chinese image assets, 5917 normalized QA rows; not English/Lite/classic MME. Project platform importer expects mme-realworld-cn-shuf-NasPic-imgplaceholder.jsonl."
+    },
+    "zoombench": {
+      "repo": "inclusionAI/ZoomBench",
+      "upstream": "https://github.com/inclusionAI/Zooming-without-Zooming",
+      "provenance": "official_project_link",
+      "observed_http_status": 200,
+      "observed_revision": "b788097e57d30510c6877824833234a73bf80d25",
+      "note": "Use all 845 full-image questions from data/test.parquet, not crop_image or a crop/search method. Preserve original query/response; project platform importer expects pbench-shuf-NasPic-imgplaceholder.jsonl."
+    },
+    "perception": {
+      "repo": "moonshotai/PerceptionBench",
+      "upstream": "https://github.com/MoonshotAI/PerceptionBench",
+      "provenance": "official_project_link",
+      "observed_http_status": 200,
+      "observed_revision": "6ba8c3135c7675ad6a5c141536a86b9460c70960",
+      "note": "Use PerceptionBench.jsonl, 3000 questions with image data URIs and original problem/hint fields; not the unrelated medical or vision-judge datasets sharing this name. Project importer expects perceptionbench.jsonl normalized prompt/images."
+    },
+    "treebench": {
+      "repo": "HaochenWang/TreeBench",
+      "upstream": "https://github.com/Haochen-Wang409/TreeVGR",
+      "provenance": "official_project_link",
+      "observed_http_status": 200,
+      "observed_revision": "a4eb437ab71d14f6ab1a4cf05213d0f72f831b71",
+      "note": "Use TreeBench.tsv, 405 rows; not TreeVGR training sets. Project reports platform answer accuracy, not the extra grounding-IoU metric; importer expects treebench-shuf-imgplaceholder.jsonl."
+    },
+    "o3": {
+      "repo": "m-Just/O3-Bench",
+      "upstream": "https://github.com/m-Just/InSight-o3",
+      "provenance": "official_project_link",
+      "observed_http_status": 200,
+      "observed_revision": "478bd2150344654eaddb49a9473206a9698dec8f",
+      "note": "Use test/metadata.jsonl plus test/images, 345 chart/map questions. Preserve question/options/answer and layout fields. InSight-o3/O3-Bench returned 401; use this accessible author repository. Project importer expects insight-o3.jsonl normalization."
+    },
+    "countqa": {
+      "repo": "Jayant-Sravan/CountQA",
+      "upstream": "https://huggingface.co/datasets/Jayant-Sravan/CountQA",
+      "provenance": "author_release",
+      "observed_http_status": 200,
+      "observed_revision": "f92cc6fe46542c61e2916e3d2ae9a911e2216b1a",
+      "note": "Source is image-level with parallel questions/answers lists. Expand aligned QA pairs for the project's 1528 question denominator; not the number of image rows or a lite sample. Importer expects countqa-shuf-imgplaceholder.jsonl, retaining original platform query/system."
+    }
+  }
+}

@@ -1,0 +1,244 @@
+{
+  "audited_on": "2026-10-19",
+  "method": "read-only project source and result inspection; no evaluation launched",
+  "complete_table_platform_extension": {
+    "source": "selected project platform launcher -> single-task launcher -> evaluate_v3",
+    "launcher_sha256": "6db6fe71a22d1af872b82af92f794bb6b30abbf351f7cf8d03ebf7d7615f9be1",
+    "single_task_launcher_sha256": "7de9b7cd1f8b46c4995ccddef63111c2876a1c763a18f691e81e6387b491b6e6",
+    "inference_source_sha256": "9ddf794782c75a0f9252f5b7a11269629be2b424024dd13f563db6429fb9b73c",
+    "parser_source_sha256": "b2addd8b8cd5c56d586fa7162b6770fd12cff119af209cf3b2a5cb4df72850c0",
+    "metric_source_sha256": "c6d2a2cfa7e22f7964a7a1f3780a01d85f42bad23cbba7dd93579fd7b74b4538",
+    "local_judge_source_sha256": "3537795a22b8e26763d9e7497efd5cf4d3c2c938a1047e4effdaa6a6f9740f36",
+    "normalized_annotations": {
+      "vstar": {
+        "rows": 191,
+        "sha256": "c508fb6112b54bfbb2b9877701cdee8aa2ca6ff0ff2ff3c917ef50bd33ca1a10"
+      },
+      "hr4k": {
+        "rows": 800,
+        "sha256": "c21e6165f680d7b219deb64d4e64a53d1b172e8b21acea1bcbeb16ff9955b8ac"
+      },
+      "hr8k": {
+        "rows": 800,
+        "sha256": "ec76429ab97bbb4600d71dbe0214fe24528ef441a56f327a2e78acfde66e5196"
+      },
+      "mme_en": {
+        "rows": 23609,
+        "sha256": "7e05208c027c7021e17a7e2ec9c785ec980031e73c17afb2faff39bbf7164cfa"
+      },
+      "mme_cn": {
+        "rows": 5917,
+        "sha256": "0a2ef6a2c7b439d31535aae20b6eb39db525cae867c156f07a36849c61b646cf"
+      },
+      "zoombench": {
+        "rows": 845,
+        "sha256": "1b0cf064e0cd67b9ee48c3d04c0bcec8c52887086dfc1c0ac26a27f778283653"
+      },
+      "perception": {
+        "rows": 3000,
+        "sha256": "7eb7768beff916a56d33eee94219db8e120249642179949e14527b12110ec4c4"
+      },
+      "treebench": {
+        "rows": 405,
+        "sha256": "e026dc3d9c34af25e0e66c265156f2751bf2e032f13ba2e6ffebeb22730a043d"
+      },
+      "o3": {
+        "rows": 345,
+        "sha256": "a8164b54dee026ee5f9c0f7430c8678cd2c2541eeae7535a2e10a4e5c911e788"
+      },
+      "countqa": {
+        "rows": 1528,
+        "sha256": "984b3a8f0f14cf5d437cd9e8330d254c311bb6446d51509c6fdd3dcca0759f96"
+      }
+    },
+    "inference": {
+      "max_tokens": 16384,
+      "context": 32768,
+      "max_images": 10,
+      "temperature": 0,
+      "top_p": 1,
+      "thinking": false
+    },
+    "judge": "Qwen3.5-35B-A3B; native tokenizer + empty-think prefix; raw completion 96 tokens; wrong-only",
+    "scope": "Read-only source inspection and full annotation row counts/hashes; not full image-tree or real-GPU acceptance. No private annotations or result texts distributed. MME is MME-RealWorld, not classic MME."
+  },
+  "final_script_selection_followup_20261020": {
+    "unchanged_recorded_source_config_summary_artifacts": 44,
+    "checked_artifacts": 44,
+    "scope": "Current remote bytes match the previously recorded private source manifest; not proof of historical execution timestamps or new runtime acceptance",
+    "canonical_mmlongbench25_launcher_sha256": "5f51dd62187a39240f2b4fc79445183b4faa211727e79845bb631590b48e3f04",
+    "legacy_visual_core_launcher_sha256": "d1df10021605e03de90fe1e0b877910b9bf8fd69bad1af62a873af8ec28213c3",
+    "mutable_default_warning": "Canonical launcher robust-output defaults to 1; legacy visual-core launcher output defaults to 512 and robust-output to 1. Recorded reference invocation overrides these; portable profile selects visual25/2048/robust-output disabled.",
+    "selection_index": "FINAL_SCRIPT_SELECTION.md",
+    "new_evaluation_launched": false
+  },
+  "spar": {
+    "profile": "answer2048_llmjudge_v2",
+    "generation_max_tokens": 2048,
+    "primary_aggregation": "equal-weight 20-task macro; not optional LLM audit micro",
+    "launcher_source_sha256": "b5f3a345139f39b6d596f1c9d7ce90cc36b3c25da285533c374e098a001f6a87",
+    "verified_summaries": [
+      {
+        "model": "Qwen3.5-4B base",
+        "sha256": "39efed563b308e36f352e3f14b2ddf380a7706c1341f4e239b86cdd89c098b28",
+        "samples": 7211,
+        "tasks": 20,
+        "reported_overall": 41.465008069491795,
+        "recomputed_task_macro": 41.4650080694918
+      },
+      {
+        "model": "reference 4B",
+        "sha256": "0fbe9cffe82e6e49fde1d94cd65e61b6f51ce9fb687dbdb945ce44053ffa9a56",
+        "samples": 7211,
+        "tasks": 20,
+        "reported_overall": 45.69163206517503,
+        "recomputed_task_macro": 45.69163206517503
+      }
+    ],
+    "limitations": "Summary aggregation, launcher profile and frozen reference metric replay verified; real-data generation remains pending. Historical model identity/source versions are not newly certified."
+  },
+  "erqa": {
+    "review_prompt_byte_comparison": "Both initial-correct and initial-wrong prompt construction matched the selected project source on the same fixture.",
+    "initial_wrong_judge_max_tokens": 1024,
+    "initial_correct_judge_max_tokens": 160,
+    "fixture": {
+      "question": "question",
+      "gold": "A",
+      "prediction": "prediction"
+    },
+    "initial_wrong_prompt_sha256": "9a54e05cdea39007069edce3bf4f8f1bd10c5460cb408269d2eab9f0c236476d",
+    "initial_correct_prompt_sha256": "40f2bbb731a0084d1faa52a04324178ba58b8267fd7d04ad730222dd7011de30",
+    "semantic_ambiguous": "retain initial verdict",
+    "transport_or_parse_failure": "error; withhold new final score"
+  },
+  "followup_reference_launch_evidence": {
+    "agentvista": {
+      "launcher_sha256": "a830ac326a0609b51b39b4317d091ea9c91576fa639d34f2180038fdb8611137",
+      "inner_launcher_sha256": "cb2a0be83a5a1c10628b7ed2f82b5b14b597121f635b089ba7b0434ff49d33d4",
+      "saved_system_prompts": 209,
+      "distinct_saved_system_prompt_hashes": 1,
+      "saved_and_portable_rendered_system_prompt_sha256": "cb34ba159c2ebc59fb9495dec74016db1bfcc7e9ce88f3c04767986cf5845a3c",
+      "selected_system_prompt_key": "multi_tool_agent_search_only",
+      "free_backend_source_matches_local_historical_tree_sha256": "ee9226318f248119ca51b8e40e064b7e6f1733da203ba2a9ef38aef4609f8fd5",
+      "launcher_parameters": {
+        "turns": 30,
+        "images": 100,
+        "total_tokens": 65536,
+        "completion_tokens": 1024,
+        "tool_threshold": 12,
+        "web_calls": 100,
+        "image_calls": 100,
+        "api_retries": 5
+      },
+      "saved_judge_summary": {
+        "samples": 209,
+        "judged": 206,
+        "infer_failed": 3,
+        "correct": 36,
+        "accuracy_full_dataset": 0.1722488038277512
+      },
+      "saved_judge_summary_sha256": "baf21af417e82384a930cf3de073098af64d56e101d355fe71beb7692f5f8dc0",
+      "retained_result_files": 206,
+      "visit_limit_observation": {
+        "saved_tool_feedback_over_8000_chars": 43,
+        "feedback_at_150000_plus_23_char_prefix": 2,
+        "prefix": "Tool 'visit' returned: ",
+        "wrapper_explicit_visit_chars": 150000
+      },
+      "remaining_limitations": "Visit bound supported by YAML and retained saturated tool observations; shell environment itself not snapshotted. Local source equality does not prove its timestamp at execution. Live tool/endpoint and judge checkpoint acceptance remain separate.",
+      "source_role": "selected direct-API launcher"
+    },
+    "mimic": {
+      "run_log_sha256": "bb3dd55463d9b07a413f807cc4872f7c9d08a7350c7d4a774265f784045f8ce3",
+      "mathruler_unavailable_warning_present": true,
+      "logged_counting_denominator": 2500,
+      "portable_fulluid_counting_denominator": 5000,
+      "identity_separation_required": true,
+      "completion_evidence": "Full per-model prediction and judge identities are required; task status or model rosters are insufficient.",
+      "scope": "Historical branch selection and incomplete-denominator evidence only; not certification of a complete four-task result. Private model aliases, run IDs and operational records are omitted."
+    }
+  },
+  "frozen_reference_output_replay": {
+    "audited_on": "2026-10-19",
+    "scope": "Historical model-output scoring only; no generation or live LLM judgment acceptance. No private questions/images/responses bundled.",
+    "mmlongbench_archive_warning": {
+      "scope": "Read-only selected25 archived score/cache accounting; not new generation or full metric replay",
+      "tasks_with_score_files": 25,
+      "tasks_without_filtered_rows": 24,
+      "affected_task": "mm_niah_retrieval-image_K128",
+      "cache_rows": 300,
+      "final_json_rows": 299,
+      "filtered_record_raw_characters": 6914,
+      "filtered_record_output_tokens": 2048,
+      "filtered_record_parsed_output": "",
+      "archived_macro_percent": 68.34122630992196,
+      "new_wrapper_completion_status": "rejected because an empty parsed output was excluded; not an empty raw response",
+      "affected_score_sha256": "2be1490ccf1324a8bfc8813f2db2791a114f9f0ef3580a80c24438bb7c53a91a"
+    },
+    "milebench_archive_warning": {
+      "scope": "Replayed all 29 task metrics on archived raw answers using frozen historical letter extractions; no new LLM extraction or cache-input provenance certification",
+      "tasks": 29,
+      "raw_answer_rows": 6440,
+      "all_task_counts_match_summaries": true,
+      "cross_task_reused_sample_ids": 0,
+      "inspected_summary_macro_percent": 70.42000505212026,
+      "replayed_macro_percent": 70.42000505212026,
+      "replayed_tasks": 29,
+      "missing_historical_extractions": 0,
+      "invalid_multiple_choice_gold": 0,
+      "historical_cache_valid_lines_all_models": 33672,
+      "historical_cache_invalid_lines_skipped_like_reference": 300,
+      "existing_main_table_value_percent": 70.08,
+      "status": "Unresolved artifact/table source discrepancy; historical table left unchanged, neither value newly certified as final model performance",
+      "summary_sha256": "1b5c1143596a84f928494496d40305a7267599cb494e9fce77188688c7d0e153"
+    },
+    "spar": {
+      "rows": 7211,
+      "tasks": 20,
+      "per_example_mismatches_against_current_reference": 0,
+      "maximum_task_delta_against_archived_summary": 0.0,
+      "portable_macro_percent": 45.69163206517503,
+      "archived_macro_percent": 45.69163206517503,
+      "prediction_sha256": "d81486b12f8bef67e379eabf3b890bc6159ffb903b90b47e83adbe9f8c10fe4d",
+      "current_reference_source_sha256": "592ae9edf67049de9e3d458f282f5d71482de52123afe6d22cad59696d1f1646",
+      "scoring_columns_sha256": "5326c0b378004af36c79c46147e531e27132077f5fec6f642d3f88c0c4c0738a"
+    },
+    "mmsi": {
+      "rows": 1000,
+      "archived_correct": 323,
+      "portable_correct": 323,
+      "original_parser_per_item_mismatches_against_saved_csv": 0,
+      "latest_final_parser_per_item_mismatches_against_saved_csv": 0,
+      "prediction_sha256": "53a233bb715f61151341f25c3992d8b229c07d46cbc199888f5d561c8585e82e"
+    },
+    "mindcube": {
+      "rows": 1050,
+      "archived_correct": 557,
+      "portable_correct": 557,
+      "all_setting_total_and_correct_deltas": 0,
+      "actual_setting_counts": {
+        "around": 250,
+        "rotation": 200,
+        "among": 600
+      },
+      "prediction_sha256": "e7b0836aac00e81f2629f7fcd7d5e069c97c4850942729ee603e9ee70fb9ce0d"
+    },
+    "memlens": {
+      "scope": "Archived verdict aggregation only; no LLM rejudgment or parser acceptance from this check",
+      "total_per_split": 789,
+      "correct_per_split": {
+        "32k": 405,
+        "64k": 356,
+        "128k": 327,
+        "256k": 256
+      },
+      "recomputed_macro_percent": 42.585551330798474,
+      "details_sha256": {
+        "32k": "ebb8307ede9cc8f198900dfe24e664d8e2ea79c827b521b04917172acd8d8621",
+        "64k": "c04d3bdc53e52cc905831278d83b91fffc6f1d3f6f819eddb03cc3e1b586feca",
+        "128k": "d0cbba0d1f7acf76215ad6e25f2ea00044d83a60aa1d0004cd5c6d4f935def69",
+        "256k": "5f50287c3c5cde79da9c6f479263c687d2b4e24df4256f1e511c6b262377a669"
+      }
+    }
+  }
+}

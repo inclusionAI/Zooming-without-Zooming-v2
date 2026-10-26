@@ -1,0 +1,148 @@
+{
+  "output_root": "../data/prepared",
+  "datasets": {
+    "chartography": {
+      "source": "../data/downloads/chartography/data.parquet",
+      "image_root": "../data/downloads/chartography",
+      "format": "raw"
+    },
+    "mimic": {
+      "source": "../data/downloads/mimic",
+      "format": "raw",
+      "options": {
+        "mathruler_mode": "disabled"
+      }
+    },
+    "mmsi": {
+      "source": "../data/downloads/mmsi/MMSI_Bench.parquet",
+      "format": "raw"
+    },
+    "spar": {
+      "source": "../data/downloads/spar",
+      "format": "raw"
+    },
+    "mmlongbench": {
+      "source": "../data/downloads/mmlongbench",
+      "format": "native"
+    },
+    "milebench": {
+      "source": "../data/downloads/milebench",
+      "format": "raw"
+    },
+    "memlens": {
+      "source": "../data/downloads/memlens",
+      "image_root": "../data/downloads/memlens/images",
+      "format": "raw"
+    },
+    "erqa": {
+      "source": "../data/downloads/erqa/data/erqa.tfrecord",
+      "format": "raw"
+    },
+    "viewspatial": {
+      "source": "../data/downloads/viewspatial/ViewSpatial-Bench.json",
+      "image_root": "../data/downloads/viewspatial",
+      "format": "raw"
+    },
+    "mindcube": {
+      "source": "../data/downloads/mindcube/data",
+      "image_root": "../data/downloads/mindcube/data",
+      "format": "raw"
+    },
+    "agentvista": {
+      "source": "../data/downloads/agentvista",
+      "format": "raw"
+    },
+    "screenspot_pro": {
+      "source": "../data/downloads/screenspot_pro",
+      "format": "native"
+    },
+    "ui_vision": {
+      "source": "../data/downloads/ui_vision",
+      "format": "native"
+    },
+    "mmstar": {
+      "source": "../data/downloads/mmstar",
+      "format": "raw",
+      "options": {
+        "judge_profile": "platform_local96"
+      }
+    },
+    "babyvision": {
+      "source": "../data/downloads/babyvision",
+      "format": "raw",
+      "options": {
+        "judge_profile": "platform_local96"
+      }
+    },
+    "vstar": {
+      "source": "../data/downloads/vstar",
+      "format": "raw",
+      "options": {
+        "judge_profile": "platform_local96"
+      }
+    },
+    "hr4k": {
+      "source": "../data/downloads/hrbench",
+      "format": "raw",
+      "options": {
+        "judge_profile": "platform_local96"
+      }
+    },
+    "hr8k": {
+      "source": "../data/downloads/hrbench",
+      "format": "raw",
+      "options": {
+        "judge_profile": "platform_local96"
+      }
+    },
+    "mme_en": {
+      "source": "../data/downloads/mme_realworld",
+      "format": "raw",
+      "options": {
+        "judge_profile": "platform_local96"
+      }
+    },
+    "mme_cn": {
+      "source": "../data/downloads/mme_realworld",
+      "format": "raw",
+      "options": {
+        "judge_profile": "platform_local96"
+      }
+    },
+    "zoombench": {
+      "source": "../data/downloads/zoombench",
+      "format": "raw",
+      "options": {
+        "judge_profile": "platform_local96"
+      }
+    },
+    "perception": {
+      "source": "../data/downloads/perception",
+      "format": "raw",
+      "options": {
+        "judge_profile": "platform_local96"
+      }
+    },
+    "treebench": {
+      "source": "../data/downloads/treebench",
+      "format": "raw",
+      "options": {
+        "judge_profile": "platform_local96"
+      }
+    },
+    "o3": {
+      "source": "../data/downloads/o3",
+      "format": "raw",
+      "options": {
+        "judge_profile": "platform_local96"
+      }
+    },
+    "countqa": {
+      "source": "../data/downloads/countqa",
+      "format": "raw",
+      "options": {
+        "judge_profile": "platform_local96"
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-25",
+  "scope": "Public source export, portable paths, preparation and selected-benchmark execution",
+  "candidate_archive_sha256": "f8d6f8d25b850b0fdc02d03032fec230bad8135aad236ae61b7c38ad7b3bae5d",
+  "cpu_validation": {
+    "environment": "Isolated extracted source on Linux, Python 3.12.3",
+    "tests_run": 297,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "process_socket_tests_enabled": true,
+    "test_processes_remaining": false,
+    "gpu_models_started": false,
+    "earlier_local_attempt": "Restricted desktop permissions prevented socket/process-group tests; not counted as passed."
+  },
+  "verified": [
+    "25 benchmark adapters and preparation/registration routes are present; this is coverage, not full real-data acceptance.",
+    "Model, judge, dataset, image and result paths are supplied by users through configuration or CLI.",
+    "Configuration-relative paths are resolved relative to their JSON files.",
+    "Private experiment identifiers and machine-specific retry scripts are excluded from the public export.",
+    "Caller CUDA_VISIBLE_DEVICES identifiers/order are retained; invalid or insufficient allocations fail before launch.",
+    "MileBench independent judge requests rotate over all configured endpoints; retries retain the chosen endpoint and successful cache entries are reused.",
+    "Core preprocessing and scoring sources are unchanged; neutral protocol identifiers require new compatible contracts rather than permissive reuse."
+  ],
+  "remaining_limitations": [
+    "Public run-suite serializes benchmarks but does not automatically start/release/swap main and judge services.",
+    "Native GUI recovery is complete-split only, not a per-question interruption journal.",
+    "Native GUI backend is an explicit model-family adapter, not an arbitrary multimodal-model backend.",
+    "Real GPU/full-dataset integration and third-party redistribution review remain open."
+  ],
+  "live_deployment_modified": false,
+  "full_real_datasets_tested": false,
+  "real_gpu_tested": false,
+  "release_ready": false
+}

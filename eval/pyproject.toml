@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "zwz-eval"
+version = "0.1.0.dev0"
+description = "Versioned ZwZ-v2 evaluation protocols and preserved benchmark scorers"
+requires-python = ">=3.10"
+license = {text = "Apache-2.0; bundled third-party components retain their own terms"}
+dependencies = []
+
+[project.optional-dependencies]
+erqa-prepare = ["tensorflow>=2.15", "Pillow>=10"]
+platform-prepare = ["qwen-vl-utils>=0.0.14", "Pillow>=10", "torch>=2.5"]
+native-judge = ["transformers>=4.51", "tokenizers>=0.21"]
+mathruler = ["mathruler", "pylatexenc"]
+api = ["openai>=1.60,<3", "Pillow>=10", "tqdm>=4", "requests>=2.31", "PyYAML>=6"]
+data = ["huggingface-hub>=0.28", "datasets>=3", "pyarrow>=14", "Pillow>=10"]
+mmlongbench = ["numpy>=1.24", "datasets>=3", "Pillow>=10", "requests>=2.31", "rouge-score>=0.1.2", "PyYAML>=6", "tqdm>=4", "openai>=1.60,<3"]
+agentvista = ["openai>=1.60,<3", "Pillow>=10", "requests>=2.31", "PyYAML>=6", "tqdm>=4", "duckduckgo-search>=6", "trafilatura>=1.12", "beautifulsoup4>=4"]
+
+[project.scripts]
+zwz-eval = "zwz_eval.cli:main"
+
+[tool.setuptools]
+license-files = ["LICENSE", "NOTICE", "THIRD_PARTY_NOTICES.md", "third_party/licenses/*"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["zwz_eval*"]
+exclude = ["*.__pycache__*"]
+
+[tool.setuptools.package-data]
+zwz_eval = ["resources/**/*"]
+
+[tool.setuptools.exclude-package-data]
+"*" = ["**/__pycache__/*", "**/*.pyc", "**/*.pyo"]

@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# Example environment for the multi-region VQA synthesis pipeline.
+# Copy to `configs/local_env.sh` (gitignored) and fill in your own values.
+# All API keys are read by an in-process key pool; comma-separated values are
+# round-robined across concurrent workers.
+
+# --- OpenAI-compatible LLM gateway endpoints + keys ---
+export MLLM_KEY="your-primary-key-1,your-primary-key-2"
+export MLLM_URL="https://your-llm-gateway.example.com/v1"
+export KIMI_KEY="your-secondary-key"
+export KIMI_URL="https://your-llm-gateway.example.com/v1"
+export MATRIX_API_KEY="your-audit-key"
+
+# --- Model names served by your gateway ---
+export STRONG_MODEL="Qwen3.5-VL-72B"        # primary generation model
+export SECONDARY_MODEL="Kimi-K2.6"          # secondary generation model
+export REJECT_MODEL="Qwen3.6-35B-A3B"       # cheap rejection sampler
+export JUDGE_MODEL="GLM-5.2"                # final answerability judge
+
+# --- Qwen-VL auditor used for the final answerability cross-audit ---
+export PREMIUM_QWEN_VL_MODEL="Qwen3.5-VL-72B"
