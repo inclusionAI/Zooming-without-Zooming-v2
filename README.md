@@ -1,6 +1,6 @@
 # Zooming without Zooming v2 (ZwZ2)
 
-<br><br>
+<br>
 
 <p align="center">
   📃 <a href="PAPER_URL">Paper</a> | 🏠 <a href="https://github.com/inclusionAI/Zooming-without-Zooming-v2">Project</a> | 🤗 <a href="https://huggingface.co/datasets/inclusionAI/ZwZ2-RL-VQA">ZwZ2-RL-VQA</a>
