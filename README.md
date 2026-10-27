@@ -1,5 +1,12 @@
 # Zooming without Zooming v2 (ZwZ-v2)
 
+<br><br>
+
+<p align="center">
+  📃 <a href="PAPER_URL">Paper</a> | 🏠 <a href="https://github.com/inclusionAI/Zooming-without-Zooming-v2">Project</a> | 🤗 <a href="https://huggingface.co/collections/inclusionAI/zooming-without-zooming-v2/ZwZ2-RL-VQA">ZwZ2-RL-VQA</a>
+  🤗 <a href="https://huggingface.co/collections/inclusionAI/zooming-without-zooming-v2/ZwZ2-4B">ZwZ2-4B</a> | 🤗 <a href="https://huggingface.co/collections/inclusionAI/zooming-without-zooming-v2/ZwZ2-9B">ZwZ2-9B</a> | 🤗 <a href="https://huggingface.co/collections/inclusionAI/zooming-without-zooming-v2ZwZ2-27B">ZwZ2-27B</a>
+</p>
+
 ## ✨ Introduction
 
 **Zooming without Zooming v2** connects fine-grained visual evidence across regions.
