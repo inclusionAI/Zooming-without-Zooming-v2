@@ -1,4 +1,4 @@
-# Zooming without Zooming v2 (ZwZ-v2)
+# Zooming without Zooming v2 (ZwZ2)
 
 <br><br>
 
