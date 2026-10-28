@@ -16,7 +16,7 @@ The models transfer across perception, spatial reasoning, long-context understan
 and multimodal agents.
 
 <p align="center">
-  <a href="assets/zwz-v2-overview.pdf"><img src="assets/zwz-v2-overview.svg" width="100%" alt="ZwZ-v2 benchmark results"></a>
+  <a href="assets/zwz-v2-overview.svg"><img src="assets/zwz-v2-overview.svg" width="100%" alt="ZwZ-v2 benchmark results"></a>
 </p>
 
 ## ⚙️ Method
