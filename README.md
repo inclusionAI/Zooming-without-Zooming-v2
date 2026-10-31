@@ -226,3 +226,14 @@ feedback or contributions. Thank you for your support!
 ## 📄 License
 
 Apache License 2.0. See [LICENSE](LICENSE).
+
+## 📄 Citation
+
+```bibtex
+@article{wei2026zoomingv2,
+  title={Zooming without Zooming v2: From Seeing Details to Connecting Evidence for Generalizable Multimodal Perception},
+  author={Wei, Lai and Li, Yatai and He, Liangbo and Lan, Jun and Gu, Renjie and Cao, Linhan and Lin, Junkai and Zhu, Huijia and Wang, Weiqiang and Kong, Linghe and Wang, Yue and Zhang, Zhuosheng and Huang, Weiran},
+  journal={arXiv preprint arXiv:2610.37037},
+  year={2026}
+}
+```
